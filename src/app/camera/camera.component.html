@@ -1,0 +1,22 @@
+<p>camera works!</p>
+<div>
+  <webcam
+    class="row-sm-10 row-lg-10"
+    id="box"
+    [trigger]="triggerObservable"
+    (imageCapture)="handleImage($event)"
+    *ngIf="showWebcam"
+    [switchCamera]="nextWebcamObservable"
+  ></webcam>
+</div>
+<div class="btn-group row-sm-2 row-lg-2" id="icon">
+  <button type="button" class="btn btn-primary" (click)="takeSnapshot()">
+    Take Picture
+  </button>
+  <button type="button" class="btn btn-primary" (click)="changeWebCame(true)">
+    Toggle Camera
+  </button>
+  <button type="button" class="btn btn-primary" (click)="onOffWebCame()">
+    Switch camera
+  </button>
+</div>
